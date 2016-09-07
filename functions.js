@@ -10,33 +10,44 @@ function numberToString(n){
 }
 numberToString(5);
 
+
+var number = 1;
+console.log(typeof number);
+var string = number + '';
+console.log(typeof string);
+
 /**
  * Adds one to a given number.
  * @param {number} n
  * @return {number}
  */
-function plusOne(n){
+function increase(n){
   var total = ++n;
-console.log(total);
+return total;
 }
-plusOne(6);
+
 /**
  * Subtracts one from a given number.
  * @param {number} n
  * @return {number}
  */
-function minusOne(n){
+function decrease(n){
   var total = --n;
-console.log(total);
+return total;
 }
-minusOne(7);
+decrease(4);
+
 /**
  * Adds two numbers.
  * @param {number} x
  * @param {number} y
  * @return {number} the sum
  */
-
+function add(x,y){
+  var total = x + y;
+return total;
+}
+add(2,3);
 
 /**
  * Subtracts the second number from the first.
@@ -44,7 +55,10 @@ minusOne(7);
  * @param {number} y
  * @return {number} the difference
  */
-
+function subtract(x,y){
+  var total = x - y;
+return(total);
+}subtract(12,8);
 
 /**
  * Multiplies two numbers.
@@ -52,7 +66,10 @@ minusOne(7);
  * @param {number} y
  * @return {number} the product
  */
-
+function multiply(x,y){
+var total = x*y;
+return total;
+}
 
 /**
  * Divides the first number by the second.
@@ -60,7 +77,10 @@ minusOne(7);
  * @param {number} y
  * @return {number} the quotient
  */
-
+function divide(x,y){
+  var total = x/y;
+  return total;
+}
 
 /**
  * Multiplies a number by itself.
@@ -68,7 +88,10 @@ minusOne(7);
  * @return {number} squared
  */
 
-
+function square(x){
+  total = x*x;
+  return total;
+}
 /**
  * Performs a mathematical operation on two numbers.
  * Also prints out the equation: (i.e.) "1 + 5 = 6" or "8 / 2 = 4".
@@ -77,6 +100,23 @@ minusOne(7);
  * @param {number} y
  * @return {number} the result
  */
+function calculate(operation,x,y){
+  if(operation === 'add'){
+    console.log(x + ' + ' + y +' = ' + (x+y));
+   return x + y;
+  }if(operation === 'subtract'){
+    console.log(x + ' - ' + y +' = ' + (x-y));
+    return x - y;
+  }if(operation === 'multiply'){
+    console.log(x + ' * ' + y +' = ' + (x*y));
+    return x * y;
+  }if(operation === 'divide'){
+    console.log(x + ' / ' + y +' = ' + (x/y));
+    return x / y;
+  }
+
+}
+calculate('add',4,7);
 
 
 /**
@@ -85,7 +125,13 @@ minusOne(7);
  * @param {number} b
  * @return {boolean} `a` is larger than `b`
  */
-
+function isGreaterThan(a,b){
+  if(a > b){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 /**
  * Returns true if `a` is less than `b`.
@@ -93,7 +139,13 @@ minusOne(7);
  * @param {number} b
  * @return {boolean} `a` is smaller than `b`
  */
-
+function isLessThan(a,b){
+  if(a < b){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 /**
  * Returns true if `a` and `b` are equal.
