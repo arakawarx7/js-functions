@@ -3,15 +3,24 @@
  * @param {number} n
  * @return {string} the number as a string
  */
-
+function numberToString(n){
+   var string = n.toString();
+   console.log(string);
+  return string;
+}
+numberToString(5);
 
 /**
  * Adds one to a given number.
  * @param {number} n
  * @return {number}
  */
+function add(n){
+  var total = n + 1;
 
-
+console.log(total);
+}
+add(2);
 /**
  * Subtracts one from a given number.
  * @param {number} n
