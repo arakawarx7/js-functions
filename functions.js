@@ -153,7 +153,13 @@ function isLessThan(a,b){
  * @param {number} b
  * @return {boolean} the numbers are equal
  */
-
+function areEqual(a,b){
+  if(a === b){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 /**
  * Returns the smallest value of two numbers.
@@ -161,6 +167,14 @@ function isLessThan(a,b){
  * @param {number} y
  * @return {number} the smallest number
  */
+
+function minimum(x,y){
+  if(x > y){
+    return y;
+  }else{
+    return x;
+  }
+}
 
 
 /**
@@ -170,20 +184,37 @@ function isLessThan(a,b){
  * @return {number} the largest number
  */
 
-
+function maximum(x,y){
+  if(x > y){
+    return x;
+  }else{
+    return y;
+  }
+}
 /**
  * Returns true if `n` is even.
  * @param {number} n
  * @return {boolean} the number is even
  */
-
-
+ function isEven(n){
+  if(n%2 === 0){
+    return true;
+    }else{
+      return false;
+    }
+   }
 /**
  * Returns true if `n` is odd.
  * @param {number} n
  * @return {boolean} the number is odd
  */
-
+function isOdd(n){
+  if(n%2 === 1 || n%2 ===-1){
+    return true;
+    }else{
+      return false;
+    }
+  }
 
 /**
  * Returns a letter grade.
@@ -197,7 +228,23 @@ function isLessThan(a,b){
  * @return {string} the score represented as a letter grade
  */
 
-
+function letterGrade(score,total){
+  if((score/total)*100 >= 90){
+    return "A";
+  }
+  if((score/total)*100 >= 80  && (score/total) <= 89){
+    return "B";
+  }
+  if((score/total)*100 >= 70 && (score/total) <= 79){
+    return "C";
+  }
+  if((score/total)*100 >= 60 && (score/total) <= 69){
+    return "D";
+  }
+  if((score/total)*100 >= 0 && (score/total) <= 79){
+    return "F";
+  }
+}
 /**
  * Checks if a `restaurant` object has a `reviews` property.
  * If it does, increase the property's `reviews` value by 1.
@@ -206,14 +253,25 @@ function isLessThan(a,b){
  * @return {object} restaurant
  */
 
+function incrementReviews(restaurant){
 
+  if(restaurant.reviews){
+     restaurant.reviews++;
+     console.log(restaurant.review);
+
+  }else{
+    restaurant.reviews = 1;
+  }return restaurant;
+}
 /**
  * Joins two strings with a space.
  * @param {string} word1
  * @param {string} word2
  * @return {string} joined the words joined with a space
  */
-
+function combine(word1,word2){
+return word1 +' '+ word2;
+}
 
 /**
  * Returns a circle object with the properties `circumference` and `area`.
@@ -223,3 +281,10 @@ function isLessThan(a,b){
  * @return {object} circle
  */
 
+function createCircle(radius){
+  var circle = {
+    circumference : 2*Math.PI*radius,
+    area : Math.PI*radius*radius
+
+    }; return circle;
+  }
