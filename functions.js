@@ -15,19 +15,21 @@ numberToString(5);
  * @param {number} n
  * @return {number}
  */
-function add(n){
-  var total = n + 1;
-
+function plusOne(n){
+  var total = ++n;
 console.log(total);
 }
-add(2);
+plusOne(6);
 /**
  * Subtracts one from a given number.
  * @param {number} n
  * @return {number}
  */
-
-
+function minusOne(n){
+  var total = --n;
+console.log(total);
+}
+minusOne(7);
 /**
  * Adds two numbers.
  * @param {number} x
